@@ -23,7 +23,7 @@ const calculateArea = () => {
     let base = baseInput.value;
     let height = heightInput.value;
 
-    if (_.isEmpty(base) || _.isEmpty(height)) {
+    if (!base || !height) {
         errorMessage[0].innerHTML = "Input tidak boleh kosong";
         setTimeout(() => {
             errorMessage[0].innerHTML = "";
@@ -98,7 +98,7 @@ const calculateKeliling = () => {
     const S2 = kelilingDua.value;
     const S3 = kelilingTiga.value;
 
-    if (_.isEmpty(S1) || _.isEmpty(S2) || _.isEmpty(S3)) {
+    if (!S1 || !S2 || !S3) {
         errorMessage[1].innerHTML = "Input tidak boleh kosong";
         setTimeout(() => {
             errorMessage[1].innerHTML = "";
