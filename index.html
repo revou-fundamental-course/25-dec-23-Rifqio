@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Triangle Area Calculator</title>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+        <link rel="stylesheet" href="/css/index.css" />
+        <style>
+            /* You can include your App.css styles here */
+            #image-section {
+                margin-bottom: 20px;
+            }
+
+            label {
+                margin-right: 10px;
+            }
+
+            input {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="btn-page-wrapper">
+            <button id="pageLuas" class="btn-primary">Luas</button>
+            <button id="pageKeliling" class="btn-yellow">Keliling</button>
+        </div>
+        <main id="area-section">
+            <header class="header">
+                <h1>Luas Segitiga</h1>
+            </header>
+            <section id="image-section">
+                <div id="triangle-container">
+                    <img
+                        src="./assets/segitiga.png"
+                        id="triangle-image"
+                        alt=""
+                    />
+                </div>
+                <div>
+                    <span>Rumus Luas Segitiga Yaitu: </span>
+                    <p id="formula-template">L = 1/2 x a x t</p>
+                </div>
+                <div>
+                    <ul>
+                        <span>Di mana: </span>
+                        <li>L = Luas</li>
+                        <li>a = Panjang Alas</li>
+                        <li>t = Tinggi</li>
+                    </ul>
+                </div>
+            </section>
+            <hr />
+            <header id="bottom-header">
+                <h1>Hitung Luas Segitiga</h1>
+            </header>
+            <div>
+                <input class="form-control" id="baseInput" type="number" />
+            </div>
+
+            <div>
+                <input class="form-control" id="heightInput" type="number" />
+            </div>
+
+            <div id="result-wrapper">
+                <ul>
+                    <li id="formula">L = 1/2 x a x t</li>
+                    <li id="calculation">
+                        L = 1/2 x <span id="baseValue">0</span> x
+                        <span id="heightValue">0</span>
+                    </li>
+                    <li id="result">L = <span id="resultValue">0</span></li>
+                </ul>
+            </div>
+
+            <div id="btn-hitung-wrapper">
+                <p class="error"></p>
+                <button class="btn-primary" id="calculateBtn">Hitung</button>
+            </div>
+
+            <div id="btn-reset-wrapper">
+                <button class="btn-yellow" id="resetBtn">Reset</button>
+            </div>
+        </main>
+
+        <!-- For Keliling Page or Section -->
+        <main id="circumference-section">
+            <header class="header">
+                <h1>Keliling Segitiga</h1>
+            </header>
+            <section id="image-section">
+                <div id="triangle-container">
+                    <img
+                        src="./assets/segitiga.png"
+                        id="triangle-image"
+                        alt=""
+                    />
+                </div>
+                <div>
+                    <span>Rumus Keliling Segitiga Yaitu: </span>
+                    <p id="formula-template">K = S1 + S2 + S3</p>
+                </div>
+                <div>
+                    <ul>
+                        <span>Di mana: </span>
+                        <li>K = Keliling</li>
+                        <li>S1 = Sisi A</li>
+                        <li>S2 = Sisi B</li>
+                        <li>S3 = Sisi C</li>
+                    </ul>
+                </div>
+            </section>
+            <hr />
+            <header id="bottom-header">
+                <h1>Hitung Keliling Segitiga</h1>
+            </header>
+
+            <div>
+                <input class="form-control" id="kelilingSatuInput" type="number" />
+            </div>
+
+            <div>
+                <input class="form-control" id="kelilingDuaInput" type="number" />
+            </div>
+
+            <div>
+                <input class="form-control" id="kelilingTigaInput" type="number" />
+            </div>
+
+            <div id="result-keliling-wrapper">
+                <ul>
+                    <li id="formula">K = S1 + S2 + S3</li>
+                    <li id="calculation">
+                        K = <span id="kelilingValue">0</span> +
+                        <span id="kelilingValueDua">0</span> +
+                        <span id="kelilingValueTiga">0</span>
+                    </li>
+                    <li id="result">K = <span id="resultValueKeliling">0</span></li>
+                </ul>
+            </div>
+
+            <div id="btn-hitung-wrapper">
+                <p class="error"></p>
+                <button class="btn-primary" id="calculateKelilingBtn">Hitung</button>
+            </div>
+
+            <div id="btn-reset-wrapper">
+                <button class="btn-yellow" id="resetKelilingBtn">Reset</button>
+            </div>
+        </main>
+    </body>
+    <script src="/js/index.js"></script>
+</html>
